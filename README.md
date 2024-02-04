@@ -20,6 +20,18 @@ O next JS é um Frameworck usado para criar sites otimizados para o SEO(Buscador
 ### next.config.mjs
 
 
+Ler Listas é recomendado Aerofunction
+### Contact = () => {
+  ### return (
+    <main>
+     <h2>Sobre</h2>
+    </main>
+  ### );
+### }
+### export default Contact;
+
+
+
 
 COMO RODAR O PROJETO BAIXADO
 Instalar todas as dependencias indicada pelo package.json
@@ -34,7 +46,7 @@ Criar o projeto React
 ### npx create-next-app
 
 Acessar o diretório do projeto
-### cd celke
+### cd diretorio
 
 Rodar o projeto React
 ### npm run dev

@@ -1,7 +1,9 @@
-export default function Home() {
+function Home() {
   return (
     <main>
-      <h2>Bem vindo Marcelo</h2>
+      <h2>Bem vindo</h2>
     </main>
   );
 }
+
+export default Home;
