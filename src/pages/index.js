@@ -1,12 +1,14 @@
-import Menu from "@/components/Menu";
-import Footer from "@/components/Footer";
+import { useState } from "react";
+
 
 function Home() {
+
+  const [name, setName] = useState('Marcelo Joia');
+
   return (
     <main>
-      <Menu />
-      <h2>Bem vindo</h2>
-      <Footer />
+      <p>{name}</p>
+      <button onClick={() => setName('Telma Viscaino')}>Alterar</button>
     </main>
   );
 }
