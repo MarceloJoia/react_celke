@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Menu from "@/components/Menu";
 
-export default function Home() {
+function Contact() {
   return (
     <>
       <Head>
-        <title>Marcelo Joia</title>
+        <title>Contato Joia Marketing</title>
         <meta name="description" content="Site ... Sobre..." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -13,9 +13,10 @@ export default function Home() {
       <main>
 
         <Menu />
-        <h1>Marcelo Joia</h1>
+        <h1>Contato</h1>
 
       </main>
     </>
   );
 }
+export default Contact;

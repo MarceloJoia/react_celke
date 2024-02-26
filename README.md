@@ -52,4 +52,7 @@ Rodar o projeto React
 ### npm run dev
 
 
+Instalação do React Icom
+### npm install react-icons --save
+
 
