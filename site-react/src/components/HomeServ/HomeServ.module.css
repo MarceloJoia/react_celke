@@ -1,0 +1,148 @@
+.maxWidth {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+/* Inicio do topo */
+.content {
+    padding: 50px 0;
+}
+
+@media (max-width: 690px) {
+    .content {
+        padding: 20px 0;
+    }
+}
+
+.top {
+    color: var(--site-color);
+    display: flex;
+    /* background: url("../images/banner_top_v5.jpg") no-repeat center;*/
+    /* background: linear-gradient(to right, var(--main-color) 25%, rgba(255, 255, 255, 0)), url("../images/banner_top_v5.jpg") no-repeat center; */
+    height: 100vh;
+    min-height: 500px;
+    /* background-size especifica o tamanho das imagens de fundo */
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.top .maxWidth {
+    width: 100%;
+    display: flex;
+}
+
+.top .topContent .text-1 {
+    font-size: 25px;
+}
+
+.top .topContent .text-2 {
+    font-size: 55px;
+    font-weight: 400;
+    margin-left: -3px;
+}
+
+.top .topContent .text-3 {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.top .topContent a {
+    display: inline-block;
+    background: var(--active-color);
+    color: var(--site-color);
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 300;
+    border-radius: 6px;
+    border: 2px solid var(--active-color);
+    transition: all 0.3s ease;
+}
+
+.top .topContent a:hover {
+    color: var(--active-color);
+    background: none;
+}
+
+/* Fim do topo */
+
+
+/* Inicio servico */
+.services {
+    color: var(--site-color);
+    background-color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 60px;
+}
+
+.services .title {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.services .servContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .servContent .card {
+    width: calc(33% - 20px);
+    background: var(--first-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*
+Alterar a cor de fundo do cartao
+*/
+.services .servContent .card:hover {
+    background: var(--active-color);
+}
+
+.services .servContent .card i {
+    font-size: 50px;
+    color: var(--active-color);
+    transition: all 0.3s ease;
+}
+
+.services .servContent .card:hover i {
+    color: var(--site-color);
+}
+
+.services .servContent .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .servContent .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .servContent .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+@media (max-width: 947px) {
+    .services .servContent .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 690px) {
+    .services .servContent .card {
+        width: 100%;
+    }
+}
+
+/* Fim servico */

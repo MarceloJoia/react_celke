@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Menu from "@/components/Menu";
 import HomeTop from "@/components/HomeTop";
+import HomeServ from "@/components/HomeServ";
 
 export default function Home() {
   return (
@@ -12,12 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
         <Menu />
         <HomeTop />
-
-        <h1>Marcelo Joia</h1>
-
+        <HomeServ />
       </main>
     </>
   );
