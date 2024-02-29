@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Menu from "@/components/Menu";
+import HomeTop from "@/components/HomeTop";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <main>
 
         <Menu />
+        <HomeTop />
+
         <h1>Marcelo Joia</h1>
 
       </main>

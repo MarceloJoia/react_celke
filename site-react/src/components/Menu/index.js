@@ -21,8 +21,8 @@ const Menu = () => {
                 </div>
                 <ul className={`${styles.menu} ${isActive ? styles.active : ""}`} id={styles.menuSite}>
                     <li><Link href="/">Home</Link></li>
-                    <li><Link href="about">Sobre Empresa</Link></li>
-                    <li><Link href="contact">Contato</Link></li>
+                    <li><Link href="/about">Sobre Empresa</Link></li>
+                    <li><Link href="/contact">Contato</Link></li>
                 </ul>
                 <div className={styles.menuBtn} id={styles.menuBtn}>
                     <i id={styles.menuIcon} onClick={activeMenu}><FaBars /></i>
