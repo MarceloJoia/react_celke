@@ -1,5 +1,7 @@
 import Head from "next/head";
+import styles from '@/styles/Contact.module.css';
 import Menu from "@/components/Menu";
+import ContactContent from "@/components/ContactContent";
 
 function Contact() {
   return (
@@ -11,11 +13,18 @@ function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
         <Menu />
-        <h1>Contato</h1>
 
-      </main>
+        <section className={`${styles.content} ${styles.contact}`}>
+          <div className={styles.maxWidth}>
+            <h2 className={styles.title}>Contato</h2>
+            <div className={styles.contactContent}>
+              <ContactContent />
+            </div>
+          </div>
+        </section>
+
+      </main >
     </>
   );
 }
