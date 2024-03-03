@@ -18,7 +18,6 @@ export default function Home() {
         <HomeTop />
         <HomeServ />
         <HomePrem />
-
       </main>
     </>
   );

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Menu from "@/components/Menu";
+import AboutContent from "@/components/AboutContent";
 
 function About() {
   return (
@@ -11,10 +12,8 @@ function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
         <Menu />
-        <h1>Sobre</h1>
-
+        <AboutContent />
       </main>
     </>
   );
