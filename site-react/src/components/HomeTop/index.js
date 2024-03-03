@@ -16,7 +16,7 @@ const HomeTop = () => {
                     <div className={styles.textOne}>Temos a solução</div>
                     <div className={styles.textTwo}>que a sua empresa precisa</div>
                     <div className={styles.textThree}>Podemos ajudar a sua empresa!</div>
-                    <Link href="contato.html">Entre em Contato</Link>
+                    <Link href="/contact">Entre em Contato</Link>
                 </div>
             </div>
         </section>
