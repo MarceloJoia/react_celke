@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Menu from "@/components/Menu";
 import AboutContent from "@/components/AboutContent";
+import Footer from "@/components/Footer";
 
 function About() {
   return (
@@ -14,6 +15,7 @@ function About() {
       <main>
         <Menu />
         <AboutContent />
+        <Footer />
       </main>
     </>
   );

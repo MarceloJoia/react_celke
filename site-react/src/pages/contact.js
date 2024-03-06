@@ -3,6 +3,7 @@ import styles from '@/styles/Contact.module.css';
 import Menu from "@/components/Menu";
 import ContactContent from "@/components/ContactContent";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 function Contact() {
   return (
@@ -25,6 +26,8 @@ function Contact() {
             </div>
           </div>
         </section>
+
+        <Footer />
 
       </main >
     </>

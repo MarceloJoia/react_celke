@@ -1,0 +1,38 @@
+.maxWidth {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+/* Inicio do topo */
+.content {
+    padding: 50px 0;
+}
+
+@media (max-width: 690px) {
+    .content {
+        padding: 20px 0;
+    }
+}
+
+
+/* Inicio do rodape */
+
+.footer {
+    background: var(--second-color);
+    padding: 25px 23px;
+    color: var(--site-color);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer span a {
+    color: var(--active-color);
+}
+
+.footer span a:hover {
+    color: var(--site-color);
+}
+
+
+/* Fim do rodape */
