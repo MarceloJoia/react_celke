@@ -10,8 +10,14 @@ Corrigir erro na execução
 👇 delete node modules and package-lock.json
 ### npm rm -rf node_modules && rm package-lock.json
 
+
+👇 Criar o pacote
+### npm init
+
+
 👇 retry installing dependencies
 ### npm install
+
 
 Look more here: https://sebhastian.com/npm-err-enoent/
 
