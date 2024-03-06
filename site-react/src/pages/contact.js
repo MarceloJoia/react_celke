@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from '@/styles/Contact.module.css';
 import Menu from "@/components/Menu";
 import ContactContent from "@/components/ContactContent";
+import ContactForm from "@/components/ContactForm";
 
 function Contact() {
   return (
@@ -20,6 +21,7 @@ function Contact() {
             <h2 className={styles.title}>Contato</h2>
             <div className={styles.contactContent}>
               <ContactContent />
+              <ContactForm />
             </div>
           </div>
         </section>
