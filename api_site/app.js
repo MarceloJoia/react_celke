@@ -6,10 +6,15 @@ const express = require('express');
 const app = express();
 
 
-// Criar a rota visualizar com método get
+// Criar a rota visualizar com método GET
 // [req] recebe, [res] devolve a resposta
 app.get('/', (req, res) => {
-    res.send('Marcelo');
+    res.send('Marcelo Tipo GET');
+})
+
+// Criar a rota CADASTRAR com método POST
+app.post('/', (req, res) => {
+    res.send("Cadastrar tipo POST");
 })
 
 app.listen(8080, () => {

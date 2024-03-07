@@ -33,3 +33,7 @@ Rodar o projeto usando o nodemon
 
 Abrir o endereço no navegador para acessar a página inicial
 ### http://localhost:8080
+
+
+Testar o método POST com INSOMINIA
+### https://insomnia.rest/download
