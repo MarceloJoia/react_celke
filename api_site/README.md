@@ -37,3 +37,22 @@ Abrir o endereço no navegador para acessar a página inicial
 
 Testar o método POST com INSOMINIA
 ### https://insomnia.rest/download
+
+-----------*** || ***-----------
+
+1) Comando para criar a base de dados)
+### CREATE DATABASE joia CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+2) Sequelize é uma biblioteca Javascript que facilita o gerenciamento do banco de dados SQL
+### npm install --save sequelize
+
+3) Instalação da dependência do MySQL2
+### npm install --save mysql2
+
+4) Sequelize-cli interface de linha de comando usada para criar modelos, configuraçãoes e arquivos de migração para bancos de dados
+Installing the CLI
+### npm install --save-dev sequelize-cli
+
+5) Iniciar o Sequelize-cli e criar o arquivo config
+### npx sequelize-cli init
+Criar um diretório [db] e colocar dentro os diretórios: "config", "migrations", "models" e "seeders"
