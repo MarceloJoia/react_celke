@@ -40,7 +40,7 @@ Testar o método POST com INSOMINIA
 
 -----------*** || ***-----------
 
-1) Comando para criar a base de dados)
+1) Comando para criar a base de dados
 ### CREATE DATABASE joia CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 2) Sequelize é uma biblioteca Javascript que facilita o gerenciamento do banco de dados SQL
