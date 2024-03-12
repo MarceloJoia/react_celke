@@ -21,6 +21,7 @@ const db = {};
 
 // Criar a variável que recebe a conexão com banco de dados
 let sequelize;
+
 // Verificar qual configuração de banco de dados você deseja usar
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -35,6 +36,13 @@ sequelize.authenticate().then(function () {
 }).catch(function () {
 
 });
+
+// Verificar a conexão com o BANCO DE DADOS
+sequelize.authenticate().then(function () {
+    console.log("Conexão realizado com sucessso.");
+  }).catch(function (error) {
+    console.log("Error. Não foi possível realizar a conexão.");
+  });
 
 
 // Identificar o MODEL

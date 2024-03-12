@@ -2,6 +2,9 @@ COMO RODAR O PROJETO BAIXADO
 Instalar todas as dependencias indicada pelo package.json
 ### npm install
 
+Criar a base de dados "celke" no MySQL
+Alterar as credencias do banco de dados no arquivo "db/config/database.js"
+
 Rodar o projeto usando o node
 ### node app.js
 
@@ -41,7 +44,7 @@ Testar o método POST com INSOMINIA
 -----------*** || ***-----------
 
 1) Comando para criar a base de dados
-### CREATE DATABASE joia CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+### CREATE DATABASE celke CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 2) Sequelize é uma biblioteca Javascript que facilita o gerenciamento do banco de dados SQL
 ### npm install --save sequelize
