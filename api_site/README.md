@@ -3,7 +3,7 @@ Instalar todas as dependencias indicada pelo package.json
 ### npm install
 
 Criar a base de dados "celke" no MySQL
-Alterar as credencias do banco de dados no arquivo "db/config/database.js"
+Alterar as credencias do banco de dados no arquivo ".env"
 
 Rodar o projeto usando o node
 ### node app.js
@@ -59,3 +59,9 @@ Installing the CLI
 5) Iniciar o Sequelize-cli e criar o arquivo config
 ### npx sequelize-cli init
 Criar um diretório [db] e colocar dentro os diretórios: "config", "migrations", "models" e "seeders"
+
+
+ENV  https://www.npmjs.com/package/dotenv
+
+Manipular variáveis de ambente
+### npm install dotenv --save
