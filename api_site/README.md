@@ -5,8 +5,8 @@ Instalar todas as dependencias indicada pelo package.json
 Criar a base de dados "celke" no MySQL
 Alterar as credencias do banco de dados no arquivo ".env"
 
-Rodar o projeto usando o node
-### node app.js
+Executar as migrations
+### npx sequelize-cli db:migrate
 
 Rodar o projeto usando o nodemon. Nodemon restarta o servidor automaticamente
 ### nodemon app.js
@@ -62,6 +62,35 @@ Criar um diretório [db] e colocar dentro os diretórios: "config", "migrations"
 
 
 ENV  https://www.npmjs.com/package/dotenv
-
 Manipular variáveis de ambente
 ### npm install dotenv --save
+
+
+Crias a Migrations https://sequelize.org/docs/v6/other-topics/migrations/
+sequelize migration [MIGRATE CLI]
+Criar o arquivo  (.sequelizerc) na raiz do projeto
+
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('config', 'database.json'),
+  'models-path': path.resolve('db', 'models'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations')
+};
+
+
+
+Acrescentar a coluna imageTop
+### npx sequelize-cli migration:generate --name create-homes-tops
+
+Criar a migrate da página home do conteúdo do topo
+### npx sequelize-cli migration:generate --name alter-homes-tops-add-imagetop
+
+Executar as migrations
+### npx sequelize-cli db:migrate
+
+Executar down - rollback - permite que seja desfeito a migration, permitindo a gestão das alterações do banco de dados e versionamento.
+### npx sequelize-cli db:migrate:undo --name nome-da-migration
+Exemplo1: npx sequelize-cli db:migrate:undo --name 20240314004005-alter-homes-tops-add-imagetop.js
+Exemplo2: npx sequelize-cli db:migrate:undo --name 20240314001833-create-homes-tops.js
