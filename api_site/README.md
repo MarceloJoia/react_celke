@@ -118,6 +118,30 @@ module.exports = {
 
 
 Criar a Model da página home do conteúdo do topo
-* Referencia: npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
-
+* Referencia: "npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string".
 ### npx sequelize-cli model:generate --name HomesTops --attributes titleOneTop:string,titleTwoTop:string,titleThreeTop:string,titleBtnTop:string,textBtnTop:string,imageTop:string
+
+
+
+
+Criar SEEDERS 
+* Referencia Documentação: "npx sequelize-cli seed:generate --name demo-user"
+### npx sequelize-cli seed:generate --name demo-homestops
+
+Executar a SEEDER
+### npx sequelize-cli db:seed:all
+
+Executar uma ÙNICA SEEDER
+Comando: "npx sequelize-cli db:seed --seed nome_da_seed.js"
+### npx sequelize-cli db:seed --seed 20240315021454-demo-homestops.js
+
+Executar a ROOLBACK
+Executar down - roolback -- Permite que seja desfeito todas as seed, permitindo a gestão das alterações do banco de dados e versionamento.
+### npx sequelize-cli db:seed:undo
+
+Executar a ROOLBACK uma ÚNUCA SEED
+Executar down - roolback -- Permite que seja desfeito uma única seed, permitindo a gestão das alterações do banco de dados e versionamento.
+* Referência documentação: "npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data"
+### npx sequelize-cli db:seed:undo --seed 20240315021454-demo-homestops.js
+
+

@@ -18,7 +18,7 @@ module.exports = {
       titleThreeTop: {
         type: Sequelize.STRING
       },
-      titleBtnTop: {
+      linkBtnTop: {
         type: Sequelize.STRING
       },
       textBtnTop: {

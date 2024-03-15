@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     titleOneTop: DataTypes.STRING,
     titleTwoTop: DataTypes.STRING,
     titleThreeTop: DataTypes.STRING,
-    titleBtnTop: DataTypes.STRING,
+    linkBtnTop: DataTypes.STRING,
     textBtnTop: DataTypes.STRING,
     imageTop: DataTypes.STRING
   }, {
