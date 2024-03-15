@@ -94,3 +94,30 @@ Executar down - rollback - permite que seja desfeito a migration, permitindo a g
 ### npx sequelize-cli db:migrate:undo --name nome-da-migration
 Exemplo1: npx sequelize-cli db:migrate:undo --name 20240314004005-alter-homes-tops-add-imagetop.js
 Exemplo2: npx sequelize-cli db:migrate:undo --name 20240314001833-create-homes-tops.js
+
+
+Exemplo de ALTER TABLE
+<!-- 
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
+
+    // Acrescentar nova coluna na tabela HomesTops
+    await queryInterface.addColumn('HomesTops', 'imageTop', {
+      type: Sequelize.DataTypes.STRING,
+      after: "textBtnTop"
+    });
+  },
+
+  // Executar down - rollback - permite que seja desfeito a migration, permitindo a gestão das alterações do banco de dados e versionamento.
+  async down(queryInterface) {
+    await queryInterface.removeColumn('HomesTops', 'imageTop');
+  }
+};
+ -->
+
+
+Criar a Model da página home do conteúdo do topo
+* Referencia: npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+### npx sequelize-cli model:generate --name HomesTops --attributes titleOneTop:string,titleTwoTop:string,titleThreeTop:string,titleBtnTop:string,textBtnTop:string,imageTop:string

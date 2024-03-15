@@ -1,16 +1,13 @@
 'use strict';
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-
-    // Cria a tabela HomesTops
     await queryInterface.createTable('HomesTops', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       titleOneTop: {
         type: Sequelize.STRING
@@ -27,6 +24,9 @@ module.exports = {
       textBtnTop: {
         type: Sequelize.STRING
       },
+      imageTop: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -34,12 +34,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
+      }
     });
   },
-
-  // Executar down - rollback - permite que seja desfeito a migration, permitindo a gestão das alterações do banco de dados e versionamento.
-  async down(queryInterface) {
+  async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('HomesTops');
   }
 };
