@@ -6,11 +6,12 @@ const express = require('express');
 const app = express();
 
 // Testar a conexão com o banco de dados
-const db = require('./db/models');
+// const db = require('./db/models');
 
 // Incluir as CONTROLLERS
 const home = require("./controllers/home");
 const contactMesage = require("./controllers/contactMesage");
+
 // Cria as rotas
 app.use('/home', home);
 app.use('/contact-mesage', contactMesage);

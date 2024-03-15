@@ -8,6 +8,7 @@ const path = require('path');
 // Sequelize é um ORM para Node.js, que tem suporte a vários bancos de dados.
 // ORM mapeamento objeto-relacional, as tabelas do banco de dados são representadas em classes e os registros de tabela seriam instâncias dessas classes.
 const Sequelize = require('sequelize');
+
 // Permite obter informações do processo na página atual
 const process = require('process');
 // Permite obter parte do caminho para o arquivo
@@ -39,13 +40,13 @@ sequelize.authenticate().then(function () {
 
 // Verificar a conexão com o BANCO DE DADOS
 sequelize.authenticate().then(function () {
-    console.log("Conexão realizado com sucessso.");
-  }).catch(function (error) {
-    console.log("Error. Não foi possível realizar a conexão.");
-  });
+  console.log("Conexão realizado com sucessso.");
+}).catch(function (error) {
+  console.log("Error. Não foi possível realizar a conexão.", error);
+});
 
 
-// Identificar o MODEL
+// Identificar o MODEL que deve ser carregada
 fs
   .readdirSync(__dirname)
   .filter(file => {
