@@ -144,4 +144,7 @@ Executar down - roolback -- Permite que seja desfeito uma única seed, permitind
 * Referência documentação: "npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data"
 ### npx sequelize-cli db:seed:undo --seed 20240315021454-demo-homestops.js
 
+Rollback de todas as seed
+### npx sequelize-cli db:seed:undo:all
+
 
