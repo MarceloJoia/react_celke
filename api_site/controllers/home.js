@@ -13,22 +13,32 @@ const router = express.Router();
 // Endereço para acessar através da aplicação externa: http://localhost:8080/home
 router.get('/', async (req, res) => {
 
-    // Recuperar oas registros do banco de dados
+    // Recupera um unico registros do banco de dados
     const homesTops = await db.HomesTops.findOne({
 
         // Indicar as colunas que devem serem carregadas
         attributes: ['titleOneTop', 'titleTwoTop', 'titleThreeTop', 'linkBtnTop', 'textBtnTop', 'imageTop'],
-        // Acrescentando condição para indicar qual registro dev ser retornado dpo Banco dedados.
-        // where: { id: 10 },
+        // where: { id: 10 },// Acrescentando condição para indicar qual registro dev ser retornado dpo Banco dedados.
     });
     // res.send('Conteúdo da página inicial!');
     // console.log(homesTops);
 
+    // Recupera um unico registros do banco de dados
+    const HomesServices = await db.HomesServices.findOne({
+
+        // Indicar as colunas que devem serem carregadas
+        attributes: [
+            'servTitle', 'servIconOne', 'servTitleOne', 'servDescOne', 'servIconTwo', 'servTitleTwo', 'servDescTwo', 'servIconThree', 'servTitleThree', 'servDescThree'
+        ],
+    });
+
+    
     // Acessar o IF se encontrar o registro no banco de dados.
-    if (homesTops) {
+    if ((homesTops) && (HomesServices)) {
         return res.json({
             error: false,
-            homesTops
+            homesTops, 
+            HomesServices
         });
     } else {
         return res.status(400).json({
@@ -36,7 +46,6 @@ router.get('/', async (req, res) => {
             message: "Erro: Não foi encontrado o conteúdo da página home do site."
         });
     }
-
 });
 
 // Exportar o que está na constante [router].

@@ -7,31 +7,43 @@
 // Como module.exports é possível exportar funções, objetos, variáveis, etc., para serem usados em outras partes do projeto.
 module.exports = {
 
-  // Criar a tabela HomesTops com as colunas implementas abaixo
+  // Criar a tabela HomesServices com as colunas implementas abaixo
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('HomesTops', {
+    await queryInterface.createTable('HomesServices', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      titleOneTop: {
+      servTitle: {
         type: Sequelize.STRING
       },
-      titleTwoTop: {
+      servIconOne: {
         type: Sequelize.STRING
       },
-      titleThreeTop: {
+      servTitleOne: {
         type: Sequelize.STRING
       },
-      linkBtnTop: {
+      servDescOne: {
         type: Sequelize.STRING
       },
-      textBtnTop: {
+      servIconTwo: {
         type: Sequelize.STRING
       },
-      imageTop: {
+      servTitleTwo: {
+        type: Sequelize.STRING
+      },
+      servDescTwo: {
+        type: Sequelize.STRING
+      },
+      servIconThree: {
+        type: Sequelize.STRING
+      },
+      servTitleThree: {
+        type: Sequelize.STRING
+      },
+      servDescThree: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -46,7 +58,7 @@ module.exports = {
   },
 
   // Executar rollback - Permite que seja desfeita a migration, permitindo a gestão das alterações do banco de dados e versionamento.
-  async down(queryInterface) {
-    await queryInterface.dropTable('HomesTops');
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable('HomesServices');
   }
 };

@@ -68,6 +68,7 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+
 // Atribuir a conexão com banco de dados para o objeto db
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

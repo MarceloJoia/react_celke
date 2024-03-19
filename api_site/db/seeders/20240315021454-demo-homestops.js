@@ -23,6 +23,7 @@ module.exports = {
     ]);
   },
 
+  // Limpar os registros da tabela "HomesTops"
   async down(queryInterface) {
     await queryInterface.bulkDelete('HomesTops', null, {});
   }
