@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
   // Cria a classe com o nome da tabela "HomesServices" e usa extends para trabalhar com herança
   class HomesServices extends Model {
     /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+    * Método auxiliar para definir associações.
+    * Este método não faz parte do ciclo de vida do Sequelize.
+    * O arquivo `models/index` chamará este método automaticamente.
+    */
 
     // Cria o relacionamento entre as tabelas 
     static associate(models) {

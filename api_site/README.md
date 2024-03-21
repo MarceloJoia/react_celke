@@ -155,6 +155,23 @@ Rollback de todas as seed
 Criar a Models da página home do conteúdo dos serviços 
 ### npx sequelize-cli model:generate --name HomesServices --attributes servTitle:string,servIconOne:string,servTitleOne:string,servDescOne:string,servIconTwo:string,servTitleTwo:string,servDescTwo:string,servIconThree:string,servTitleThree:string,servDescThree:string
 
+
+Desenvolvimento de sistema história de usuário
+- Check list
+#### 1) Criar a Model, a Migrations é criada automaticamente.
+#### 2) Migrations implementar os atributos da migration.
+#### 3) Criar a Seeders e cadastrar o conteúdo.
+#### 4) Controller, recuperar as informações do banco de dados.
+
 Criar a Models da página home do conteúdo do serviço premium 
-### npx sequelize-cli model:generate --name HomesPremiums --attributes premTitle:string,premSubtitle:string,premDesc:text,premBtn_text:string,premBtn_link:string,premImage:string
+### npx sequelize-cli model:generate --name HomesPremiums --attributes premTitle:string,premSubtitle:string,premDesc:text,premBtnText:string,premBtnLink:string,premImage:string
+
+Criar a tabela no banco de dados
+### npx sequelize-cli db:migrate
+
+Criar a Seeders
+### npx sequelize-cli seed:generate --name demo-homespremiums
+
+Executar uma Seed
+### npx sequelize-cli db:seed --seed 20240321183908-demo-homespremiums.js
 

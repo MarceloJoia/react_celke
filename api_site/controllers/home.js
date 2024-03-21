@@ -30,6 +30,7 @@ router.get('/', async (req, res) => {
         attributes: [
             'servTitle', 'servIconOne', 'servTitleOne', 'servDescOne', 'servIconTwo', 'servTitleTwo', 'servDescTwo', 'servIconThree', 'servTitleThree', 'servDescThree'
         ],
+        // where: { id: 100 },
     });
 
     
