@@ -20,10 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       // Uma empresa pode ter apenas uma Situação.
       // BelongsTo -> Um-para-Um
       AboutsCompanies.belongsTo(models.SituationsAbouts,{
-        foreignKey: 'idsituationAboutId',
+        foreignKey: 'situationAboutId',
       });
     }
-  }
+  } 
 
   // Criar as colunas que a MODEL pode manipular
   AboutsCompanies.init({

@@ -280,3 +280,44 @@ LINK: https://sequelize.org/docs/v6/core-concepts/assocs/
   Bar.belongsTo(Foo, {  
    foreignKey: 'myFooId'
   });
+
+
+
+Cria o relacionamento entre as tabelas [AboutsCompanies] e [SituationsAbouts]
+--------------------- AboutsCompanies ------------------------
+### static associate(models) {
+// Uma empresa pode ter apenas uma Situação.
+// BelongsTo -> Um-para-Um
+###   AboutsCompanies.belongsTo(models.SituationsAbouts,{
+###     foreignKey: 'situationAboutId',
+###   });
+}
+
+--------------------- SituationsAbouts ------------------------
+### static associate(models) {
+Uma situação pode está em Uma-ou-Mais empresas.
+   1 - Tabela [SituationsAbouts].
+   2 - Relacionamento [hasMany] -  Um-para-Muitos com a tabela [AboutsCompanies].
+   3 - Model [SituationsAbouts] - É a Classe.
+   4 - Chave extrangeira [foreignKey] - Aponto para a [situationAboutId] que está na outra tabela [AboutsCompanies]
+###   SituationsAbouts.hasMany(models.AboutsCompanies, {
+###     foreignKey: 'situationAboutId'
+###   });
+### }
+
+
+--------------------- Migrations ------------------------
+### situationAboutId: {
+###   type: Sequelize.DataTypes.INTEGER,
+###   defaultValue: 2, // Define uma situação padrão
+###   references: { model: 'SituationsAbouts', key: 'id' } // Relacionar as Tabelas
+### },
+
+---------------------------------------------------------------
+
+
+Recuperar dados de Duas Tabelas
+- Precisa existir o relacionameto entre as tabelas da seguinte forma:
+
+
+
