@@ -126,7 +126,6 @@ Criar a Model da página home do conteúdo do topo
 ### npx sequelize-cli model:generate --name HomesTops --attributes titleOneTop:string,titleTwoTop:string,titleThreeTop:string,titleBtnTop:string,textBtnTop:string,imageTop:string
 
 
-
 Criar SEEDERS 
 * Referencia Documentação: "npx sequelize-cli seed:generate --name demo-user"
 ### npx sequelize-cli seed:generate --name demo-homestops
@@ -185,3 +184,16 @@ Criar a seeders
 
 Criar a model da página sobre empresa
 ### npx sequelize-cli model:generate --name AboutsCompanies --attributes title:string,description:text,image:text,situationAboutId:integer
+
+Criar a Seeders
+### npx sequelize-cli seed:generate --name demo-aboutscompanies
+
+Rodar a Migate para criar a tabela no banco de dados
+### npx sequelize-cli db:migrate
+
+Rodar uma unica seed para populara o banco de dados 
+### npx sequelize-cli db:seed --seed 20240327002408-demo-aboutscompanies.js
+
+
+/////////////////////// CRIAR CONTROLLER ///////////////////////////
+
