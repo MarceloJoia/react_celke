@@ -17,7 +17,11 @@ module.exports = (sequelize, DataTypes) => {
 
     // Cria o relacionamento entre as tabelas 
     static associate(models) {
-      // define association here
+      // Uma empresa pode ter apenas uma Situação.
+      // BelongsTo -> Um-para-Um
+      AboutsCompanies.belongsTo(models.SituationsAbouts,{
+        foreignKey: 'idsituationAboutId',
+      });
     }
   }
 

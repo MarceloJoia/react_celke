@@ -26,7 +26,9 @@ module.exports = {
         type: Sequelize.TEXT
       },
       situationAboutId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DataTypes.INTEGER,
+        defaultValue: 2, // Define uma situação padrão
+        references: { model: 'SituationsAbouts', key: 'id' } // Define a que tabela essa chave estrangeira faz referência
       },
       createdAt: {
         allowNull: false,

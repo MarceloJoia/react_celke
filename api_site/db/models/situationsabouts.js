@@ -17,7 +17,16 @@ module.exports = (sequelize, DataTypes) => {
 
     // Criar o relacionamento entre as tabelas
     static associate(models) {
-      // define association here
+      // Uma situação pode está em Uma-ou-Mais empresas.
+      /**
+       * 1) Tabela [SituationsAbouts].
+       * 2) Relacionamento [hasMany()] -  Um-para-Muitos com a tabela [AboutsCompanies].
+       * 3) Model [SituationsAbouts] - É a Classe.
+       * 4) Chave extrangeira [foreignKey] - Aponto para a [situationAboutId] que está na outra tabela [AboutsCompanies]
+       */
+      SituationsAbouts.hasMany(models.AboutsCompanies, {
+        foreignKey: 'situationAboutId'
+      });
     }
   }
 
