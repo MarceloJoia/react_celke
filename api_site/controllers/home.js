@@ -10,7 +10,7 @@ const db = require('./../db/models');
 const router = express.Router();
 
 // Criar a rota visualizar os dados da página home com método get
-// Endereço para acessar através da aplicação externa: http://localhost:8080/home
+// Endereço para acessar api através da aplicação externa: http://localhost:8080/home
 router.get('/', async (req, res) => {
 
     // Recupera um unico registros do banco de dados

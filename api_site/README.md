@@ -195,5 +195,14 @@ Rodar uma unica seed para populara o banco de dados
 ### npx sequelize-cli db:seed --seed 20240327002408-demo-aboutscompanies.js
 
 
-/////////////////////// CRIAR CONTROLLER ///////////////////////////
+/////////////////////// CRIAR CONTROLLER AboutsCompanies ///////////////////////////
+1) Duplicar a Home.
+2) [app.js] na raiz construir a rota
+  - Criar a constante: 
+    ### const aboutsCompanies = require("./controllers/AboutsCompanies");
+  - Criar a rota:  
+    ### app.use('/about-companies', aboutsCompanies);
+3) 
+
+
 
