@@ -183,3 +183,5 @@ Criar a seeders
 ### npx sequelize-cli seed:generate --name demo-situationsabouts
 
 
+Criar a model da página sobre empresa
+### npx sequelize-cli model:generate --name AboutsCompanies --attributes title:string,description:text,image:text,situationAboutId:integer
