@@ -1,9 +1,14 @@
+// Normatizar o código, ajuda evitar gambiarras 
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-module.exports = {
-  async up(queryInterface, Sequelize) {
 
+// Exportando o objecto como modulo
+// Com o modulo.exports é possível exportar fuções, objectos, variáveis, etc... para serem usadas e outras partes do projeto. 
+module.exports = {
+
+  // Cadastrar o registro na tabela "HomesServices"
+  async up(queryInterface, Sequelize) {
     return await queryInterface.bulkInsert('HomesPremiums', [
       {
         premTitle: 'Serviço Premium',
@@ -19,6 +24,7 @@ module.exports = {
     ]);
   },
 
+  // Limpa os registros da tabela "HomesPremiums"
   async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete('HomesPremiums', null, {});
   }

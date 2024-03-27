@@ -175,3 +175,11 @@ Criar a Seeders
 Executar uma Seed
 ### npx sequelize-cli db:seed --seed 20240321183908-demo-homespremiums.js
 
+
+Criar a Model da Situação 
+### npx sequelize-cli model:generate --name SituationsAbouts --attributes nameSituation:string
+
+Criar a seeders
+### npx sequelize-cli seed:generate --name demo-situationsabouts
+
+
