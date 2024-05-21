@@ -1,14 +1,14 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
+// Criar uma constate do tipo Objeto para receber a Model
 module.exports = (sequelize, DataTypes) => {
   class ContentsContacts extends Model {
     /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+    * Método auxiliar para definir associações.
+    * Este método não faz parte do ciclo de vida do Sequelize.
+    * O arquivo `models/index` chamará este método automaticamente.
+    */
     static associate(models) {
       // define association here
     }

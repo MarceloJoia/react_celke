@@ -148,61 +148,43 @@ Rollback de todas as seed
 ### npx sequelize-cli db:seed:undo:all
 
 <!-- Terefo delegada pela empresa -->
-
 Criar a Models da página home do conteúdo dos serviços
-
 ### npx sequelize-cli model:generate --name HomesServices --attributes servTitle:string,servIconOne:string,servTitleOne:string,servDescOne:string,servIconTwo:string,servTitleTwo:string,servDescTwo:string,servIconThree:string,servTitleThree:string,servDescThree:string
 
 Desenvolvimento de sistema história de usuário
-
 - Check list
-
 #### 1) Criar a Model, a Migrations é criada automaticamente.
-
 #### 2) Migrations implementar os atributos da migration.
-
 #### 3) Criar a Seeders e cadastrar o conteúdo.
-
 #### 4) Controller, recuperar as informações do banco de dados.
-
 Criar a Models da página home do conteúdo do serviço premium
-
 ### npx sequelize-cli model:generate --name HomesPremiums --attributes premTitle:string,premSubtitle:string,premDesc:text,premBtnText:string,premBtnLink:string,premImage:string
 
 Criar a tabela no banco de dados
-
 ### npx sequelize-cli db:migrate
 
 Criar a Seeders
-
 ### npx sequelize-cli seed:generate --name demo-homespremiums
 
 Executar uma Seed
-
 ### npx sequelize-cli db:seed --seed 20240321183908-demo-homespremiums.js
 
 Criar a Model da Situação
-
 ### npx sequelize-cli model:generate --name SituationsAbouts --attributes nameSituation:string
 
 Criar a seeders
-
 ### npx sequelize-cli seed:generate --name demo-situationsabouts
 
 Criar a model da página sobre empresa
-
 ### npx sequelize-cli model:generate --name AboutsCompanies --attributes title:string,description:text,image:text,situationAboutId:integer
 
 Criar a Seeders
-
 ### npx sequelize-cli seed:generate --name demo-aboutscompanies
 
 Rodar a Migate para criar a tabela no banco de dados
-
 ### npx sequelize-cli db:migrate
 
 Rodar uma unica seed para populara o banco de dados
-
 ### npx sequelize-cli db:seed --seed 20240327002408-demo-aboutscompanies.js
 
 
@@ -312,6 +294,21 @@ Executar a SEEDER
 ### npx sequelize-cli db:seed --seed 20240327194844-demo-contentscontacts.js
 
 
+Cria a Model da página de contato para receber as mensagens de contato
+### npx sequelize-cli model:generate --name ContactsMsgs --attributes name:string,email:string,subject:string,content:text
+
+Rodar a db:migrate
+### npx sequelize-cli db:migrate
+
+Criar a Seeders
+### npx sequelize-cli seed:generate --name demo-contactsmsgs
+
+Rodar a Seeders
+### npx sequelize-cli db:seed --seed 20240327203605-demo-contactsmsgs.js
 
 
+Rollback Migrate
+### npx sequelize-cli db:migrate:undo --name nome-da-migration
 
+Criara Migrate
+### npx sequelize-cli db:migrate

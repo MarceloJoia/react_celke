@@ -6,7 +6,7 @@
 // Exportar o objeto como módulo 
 module.exports = {
 
-  // Criar a tabela "ContentsContacts" com as colunas implementadas abaixo
+  // Criar a tabela "ContentsContacts" com as colunas implementadas a baixo
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('ContentsContacts', {
       id: {
