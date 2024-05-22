@@ -1,27 +1,35 @@
 // Incluir as bibliotecas
 // Gerencia as requisições, rotas e URLs, entre outra funcionalidades
 const express = require("express");
+
 // Incluir o arquivo que possui a conexão com banco de dados
 const db = require('../db/models');
+
 // Chamar a função express
 const router = express.Router();
 
 // Criar a rota cadastrar com método post
 // Endereço para acessar através da aplicação externa: http://localhost:8080/contact-message
-
 // A aplicação externa deve indicar que está enviado os dados em formato de objeto: Content-Type: application/json
-
+/*
+//Dados em formato de objeto
+{
+    "name": "Marcelo Joia",
+    "email": "sitejoia1@hotmail.com",
+    "subject": "Asunto da mensagem 4",
+    "content": "Conteúdo da mensagem 4"
+}
+*/
 
 // 3) Criar a rota do tipo POST
 // Criar a rota CADASTRAR com método POST
 router.post("/", async (req, res) => {
     // Recebe os dados enviados no corpo do e-mail
     var data = req.body;
-    // console.log(data);
+    console.log(data);
 
     // Salvar os dados que está vindo através da requisição formulário
-    await db.ContactsMsgs.create(data)
-        .then((dataContactsMsgs) => {
+    await db.ContactsMsgs.create(data).then((dataContactsMsgs) => {
             return res.json({
                 error: false,
                 message: "Mensagem cadastrada com sucesso!",

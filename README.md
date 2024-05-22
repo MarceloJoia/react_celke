@@ -62,3 +62,31 @@ Instalação do React Icom
 ### npm install react-icons --save
 
 
+
+
+---------------------------------------------
+-----  Cadastrar o conteudo da mensagem -----
+POST conteúdo para cadastrar no banco
+1) No Insominia - Headers 
+### Content-Type | application/json
+
+2) No Body - Colocar json
+### {
+###   "name": "Marcelo Joia",
+###   "email": "sitejoia@hotmail.com",
+###   "subject": "Asunto da mensagem 2",
+###   "content": "Conteúdo da mensagem 2"
+### }
+
+Colocar essa middleware no [app.js] após o [express()]
+// Chamar a função express
+### const app = express();
+
+// Criar o middleware parar receber os dados do corpo da requisição
+// Recebe o dados no formato de Objeto [json]
+### app.use(express.json());
+
+
+
+
+

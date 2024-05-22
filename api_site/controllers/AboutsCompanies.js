@@ -19,13 +19,11 @@ router.get('/', async (req, res) => {
         attributes: [
             'id', 'title', 'description', 'image', 'situationAboutId',
         ],
-
         // Buscar dados na tabela secundária
         include: [{
             model: db.SituationsAbouts,
             attributes: ['nameSituation']
         }],
-
         // Ordenar os registros pela coluna id na forma decrescente
         // Link:  https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/#ordering-eager-loaded-associations
         order: [['id', 'DESC']],
